@@ -1,0 +1,22 @@
+[package]
+name = "tangle"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+iota-sdk = { version ="1.1.1", default-features = false, features= ["client", "tls"] }
+tokio = { version ="1.32.0", default-features = false, features= ["macros"] }
+
+[[bin]]
+name = "blockchain"
+path = "src/blockchain.rs"
+
+[[bin]]
+name = "blowball"
+path = "src/blowball.rs"
+
+[[bin]]
+name = "sidetangle"
+path = "src/sidetangle.rs"

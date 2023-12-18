@@ -1,0 +1,29 @@
+[package]
+name = "zeros_nft_id"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dotenvy = { version = "0.15.7", default-features = false }
+iota-sdk = { version ="1.1.1", default-features = false, features= ["client", "irc_27", "tls"] }
+tokio = { version ="1.32.0", default-features = false, features= ["macros", "fs"] }
+serde_json = { version = "1.0.107", default-features = false}
+futures = { version = "0.3.28", default-features = false, features = ["thread-pool"] }
+
+[[bin]]
+name = "generate_address"
+path = "src/0_generate_address.rs"
+
+[[bin]]
+name = "mine_transaction"
+path = "src/1_mine_transaction.rs"
+
+[[bin]]
+name = "check_ids"
+path = "src/2_check_ids.rs"
+
+[[bin]]
+name = "send_block"
+path = "src/3_send_block.rs"

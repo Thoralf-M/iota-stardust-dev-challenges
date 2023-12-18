@@ -1,0 +1,8 @@
+[workspace]
+resolver = "2"
+members = [
+	"find_controlling_address",
+	"tangle",
+	"zeros_nft_id",
+]
+
